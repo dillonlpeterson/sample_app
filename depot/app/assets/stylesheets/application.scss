@@ -52,7 +52,7 @@
 
   #main {
     padding: 1em;
-    background: 1;
+    background: white;
     flex: 1;
   }
 
@@ -77,7 +77,7 @@
 
 @media all and (max-width: 800px) {
   #columns {
-    flex-direction: reverse;
+    flex-direction: column-reverse;
   }
 }
 
