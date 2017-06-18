@@ -28,8 +28,9 @@ class LineItemsController < ApplicationController
   # Creates a LineItem
   def create
     product = Product.find(params[:product_id])
-    @line_item = @cart.line_items.build(product: product)
+    @line_item = @cart.add_product(product)
     reset_counter
+
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to @line_item, notice: 'Line item was successfully created.' }
