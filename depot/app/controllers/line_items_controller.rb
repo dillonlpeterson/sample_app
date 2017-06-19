@@ -83,9 +83,4 @@ class LineItemsController < ApplicationController
     def reset_counter
       session[:counter] = nil
     end
-    
-    def decrement
-      @line_item.decrement
-    end
-
 end
