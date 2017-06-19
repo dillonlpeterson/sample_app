@@ -67,6 +67,8 @@ class LineItemsController < ApplicationController
     end
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_line_item
@@ -81,4 +83,9 @@ class LineItemsController < ApplicationController
     def reset_counter
       session[:counter] = nil
     end
+    
+    def decrement
+      @line_item.decrement
+    end
+
 end
