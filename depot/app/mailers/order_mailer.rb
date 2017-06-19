@@ -16,9 +16,8 @@ class OrderMailer < ApplicationMailer
   #
   #   en.order_mailer.shipped.subject
   #
-  def shipped
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def shipped(order)
+    @order = order
+    mail to: order.email, subject: "Pragmatic Store Order #{@order.id} has shipped!"
   end
 end
