@@ -1,5 +1,12 @@
 class SessionsController < ApplicationController
   def new
+    user = User.find_by(params[:name])
+    if user.try(:authenticate, params[:password])
+      session[:user_id] = user.id
+      redirect to admin_url
+    else
+      redirect_to login_url, alert: 'Invalid user/password combination'
+    end
   end
 
   def create
