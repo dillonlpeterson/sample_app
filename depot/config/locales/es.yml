@@ -1,0 +1,7 @@
+es:
+
+  layouts:
+    application:
+      title: "Biblioteca De Pragmatic"
+      home: "Inticio"
+      questions: "Preguntas"
